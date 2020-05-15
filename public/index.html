@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <title>Title</title>
+</head>
+<style>
+
+    #nested-list {
+        text-indent: 20px;
+    }
+
+</style>
+<body>
+    <div style="margin: 5%;" class="box has-text-centered">
+        <h1 class="title is-1">
+            NodeJs Documentation
+        </h1>
+        <p>Første mandatory opgave for NodeJs valgfaget 2020</p>
+        <p>Af Rasmus Lykke Sørensen, rasm222m@stud.kea.dk</p>
+        <p>Aflevering d. 15-03-2020 kl. 23:59</p>
+    </div>
+
+<div class="columns is-hcentered" style="margin: 50px;">
+    <div class="column is-narrow">
+        <div style="margin-left: 5%; width: 250px;" class="list">
+            <p style="margin: 10px;" class="title is-3">NodeJs</p>
+            <p style="font-size: 12px;"> 
+                Benyt venligst kun "hovedpunkterne" til at navigerer imellem siderne. <br>
+                Herunder Introduction, Filer, Værktøjer og Kildeliste.
+            </p>
+            <ul>
+                <a class="list-item is-active" href="/">
+                    Introduction
+                </a>
+                <ul id="nested-list">
+                    <a class="list-item">
+                        Node package manager
+                    </a>
+                    <a class="list-item">
+                        Express
+                    </a>
+                    <a class="list-item">
+                        cross-env
+                    </a>
+                </ul>
+                <a class="list-item" href="/filer">
+                    Filer
+                </a>
+                <ul id="nested-list">
+                    <a class="list-item">
+                        .json
+                    </a>
+                    <a class="list-item">
+                        .js
+                    </a>
+                    <a class="list-item">
+                        .html
+                    </a>
+                </ul>
+                <a class="list-item" href="/vaerktoejer">
+                    Værktøjer
+                </a>
+                <ul id="nested-list">
+                    <a class="list-item">
+                        budo
+                    </a>
+                    <a class="list-item">
+                        nodemon
+                    </a>
+                    <a class="list-item">
+                        jQuery
+                    </a>
+                    
+                    <a class="list-item">
+                        Postman
+                    </a>
+                    <a class="list-item">
+                        Bulma
+                    </a>
+                </ul>
+                <a class="list-item" href="/kildeliste">
+                    Kildeliste
+                </a>
+            </ul>
+        </div>
+    </div>
+        
+    <div class="column">
+        <div class="main-text">
+            <h1 class="title is-3">Introduktion</h1>
+            <p class="textarea has-text-left" rows="10">
+                Dette er forsiden af min mandatory opgave til NodeJs valgfaget for 4 semester. 2020 på KEA.<br>
+                Opgaven består af et NodeJs webserverproject, herunder diverse frameworks som er defineret i package.json filen. <br>
+                - Men dette vil blive beskrevet nærmere senere. 
+                Det vil være muligt at navigerer imellem diverse HTML sider via intuitive links eller via brug af url.<br>
+                Dette er grundet at programmet er bygget på baggrund af REST API'en. REST står for Representational state transfer <br>
+                og er en standraliseret måde at behandle efterspøgsler på webservices. REST API benytter sig af JSON. <br>
+                Siden at REST er standraliseret så betyder det at man ved hvordan den givende API virker unden at kende <br>
+                meget til den, hvilket giver mulighed for at benytte den uden at læse om den. <br>
+                Nedenfor kan man se opdelingen imllem Collection resource og Member resource hvor collection døkker over <br>
+                en gruppe af elementer hvor memener dækker over de enkelte elementer i en collection. <br>
+                HTML siderne er "udsmykket" via css fra bulma biblioteket som er linket i toppen af hver HTML fil.
+
+            </p>
+            <div>
+                <img src="rest.jpg">
+            </div>
+            
+
+
+            <h1 class="title is-3">Node package manager</h1>
+            <p class="textarea has-text-left" rows="10">
+                Node package manager også kaldet NPM er som navnet beskriver en pakke-manager designet for JavaScript.<br>
+                NPM bliver primært tilgået fra en computers terminal hvor diverse kommandoer kan udføres fra som f.eks. <br>
+                - install, update, uninstall og ls for at nævne et par stykker. <br>
+                NPM bliver installeret samtidig med Node.Js.
+            </p>
+
+
+
+            <h1 class="title is-3">Express</h1>
+            <p class="textarea has-text-left" rows="10">
+                Express er et Node.Js framework som fokuserer på at være et "letvægt" og "robust" værktøj <br>
+                til at udvikle web og mobil applikationer via HTTP. Efter installation bliver en folder kaldet node_modules <br>
+                tilføjet til projektet hvori at all Express funktioner vil kunne findes.
+                Express bliver installeret via terminalen. Her er to muligheder.
+                    1. Første mulighed er at man manuelt opretter en gyldig package.json fil (Husk "{}"). <br>
+                    Man definerer så de dependencies som man ønsker at installerer, i dette tilfælde <br>
+                    express. Dette gøres på denne måde. <br> <br>
+
+                    "dependencies": {<br>
+                        "express": "^4.17.1"<br>
+                    }<br> <br>
+
+                    Herefter benyter man sig af terminalen og skriver "npm install". <br>
+                    npm vil så kigge i package.json filen og installerer de dependencies som er defineret.<br> <br>
+
+                    2. Anden mulighed er at man opretter en gyldig package fil som mulighed 1. <br>
+                    Herefter benytter man sig af terminalen og skriver "npm install express".<br> <br>
+
+                    3. Tredje mulighed er at man benytter sig af "npm init".<br>
+                    npm vil så gennemgå et setup hvor at der i sidste ende vil være oprettet en pakage.json fil<br>
+                    Denne fil vil så indeholde diverse metadata som navn, licens osv. Men det vil være muligt at <br>
+                    installerer express via mulighed 1 eller 2 herfra. <br>
+                    Man kan også skrive "npm install `pakkenavn`" for at installerer f.eks. express <br>
+                    med det samme.
+                        
+
+            </p>
+
+            <h1 class="title is-3">cross-env</h1>
+            <p class="textarea has-text-left" rows="10">
+                Når man kører et webprogram som f.eks. et af vores projekter, så kan der forekomme <br>
+                episoder hvor man gerne vil definerer environment variabler som f.eks. hvilket <br>
+                port-nr. som serveren skal kører på. Dette er rimelig simpelt hvor mac og linux systemer <br>
+                men det skaber ofte problemer, defor har man udviklet cross-env som løser dette. 
+                Cross env installerers på samme måde som express her skrives bare "npm install --save-dev cross-env" <br>
+                
+                I package.json filen vil så blive tilføjet følgende hvilket bekræfter at cross-env er blevet installeret <br> <br>
+
+                "devDependencies": { <br>
+                    "cross-env": "^7.0.2"<br>
+                }<br><br>
+
+                For at benytte sig af cross-env så skal der defineres to scripts i package.json filen.<br><br>
+
+                "scripts": {<br>
+                    "start": "cross-env PORT=3000 node app.js",<br>
+                    "start-dev": "cross-env PORT=80 nodemon app.js"<br>
+                }<br><br>
+
+                På denne måde kan vi skrive "npm run start" eller "npm run start-dev" og vil <br>
+                herfter kører den tilknyttede kommando. 
+            </p>
+        </div>
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<style>
+
+    #nested-list {
+        text-indent: 20px;
+    }
+    
+    .main-text div{
+        margin: 50px;
+    }
+
+</style>
+
+<body>
+    <div style="margin: 5%;" class="box has-text-centered" id="title">
+        <h1 class="title is-1">
+            Værktøjer
+        </h1>
+    </div>
+
+<div class="columns is-hcentered" style="margin: 50px;">
+    <div class="column is-narrow">
+        <div style="margin-left: 5%; width: 250px;" class="list">
+            <p style="margin: 10px;" class="title is-3">NodeJs</p>
+            <p style="font-size: 12px;"> 
+                Benyt venligst kun "hovedpunkterne" til at navigerer imellem siderne. <br>
+                Herunder Introduction, Filer, Værktøjer og Kildeliste.
+            </p>
+            <ul>
+                <a class="list-item" href="/">
+                    Introduction
+                </a>
+                <ul id="nested-list">
+                    <a class="list-item">
+                        Node package manager
+                    </a>
+                    <a class="list-item">
+                        Express
+                    </a>
+                    <a class="list-item">
+                        cross-env
+                    </a>
+                </ul>
+                <a class="list-item" href="/filer">
+                    Filer
+                </a>
+                <ul id="nested-list">
+                    <a class="list-item">
+                        .json
+                    </a>
+                    <a class="list-item">
+                        .js
+                    </a>
+                    <a class="list-item">
+                        .html
+                    </a>
+                </ul>
+                <a class="list-item is-active" href="/vaerktoejer">
+                    Værktøjer
+                </a>
+                <ul id="nested-list">
+                    <a class="list-item">
+                        budo
+                    </a>
+                    <a class="list-item">
+                        nodemon
+                    </a>
+                    <a class="list-item">
+                        jQuery
+                    </a>
+                    
+                    <a class="list-item">
+                        Postman
+                    </a>
+                    <a class="list-item">
+                        Bulma
+                    </a>
+                </ul>
+                <a class="list-item" href="/kildeliste">
+                    Kildeliste
+                </a>
+            </ul>
+        </div>
+    </div>
+        
+    <div class="column">
+        <div class="main-text">
+            <div id="hvorfor-div">
+                <h1 class="title is-3">Hvorfor?</h1>
+                <p class="textarea has-text-left" rows="10">
+                For at gøre projektet nemmere at udvikle og smartere at bruge angående funktioner og design, <br>
+                så kan vi benytte os af et udvalg af værktøjer via node.js. 
+                </p>
+            </div>
+            
+            
+            <div id="budo-div">
+               <h1 class="title is-3">budo</h1>
+                <p class="textarea has-text-left" rows="10">
+                    Budo er et værktøj som gør det mulight for os at udføre "live-relode" <br>
+                    På denne måde behøver vi ikke at genindlæse browseren hver gang at der <br>
+                    foretaget en ændring i HTML, JS eller CSS filerne<br>
+                    dette gøres automatisk hver gang at der er foretaget en ændring og <br> 
+                    udvikleren er stoppet med at taste. <br>
+                    Budo bliver installeret via "npm install budo -g" <br>
+                    og kan efterfølgende kobles til javascript filen via "budo index.js --live --open" <br>
+                </p> 
+            </div>
+
+           <div id="nodemon-div">
+               <h1 class="title is-3">nodemon</h1>
+                <p class="textarea has-text-left" rows="10">
+                    Nodemon minder lidt om budo. Men i stedet for at genindlæse browseren. <br>
+                    Så genstarter nodemon node applikationen hver gang at der er foretaget ændringer. <br>
+                    Nodemon installeres med "npm install -g nodemon" og kører applikationen med <br>
+                    "nodemon [your node app]" 
+                </p>
+                <div class="iamge" style="margin: 20px;">
+                    <img src="nodemon.jpg" alt="Nodemon example">
+                </div>
+           </div>
+            
+            <div id="jquery-div">
+                <h1 class="title is-3">jQuery</h1>
+                <p class="textarea has-text-left" rows="10">
+                    jQuery er et javaScript bibliotek, som gør det nemmere for os at håndterer ting som HTML og CSS manipulation. <br>
+                    Dette kunne f.eks. være tilføjelse at bilelder, ændre farver, fjernelse af elementer og meget mere. <br>
+                    Da jQuery er et javaScript bibliotek så vil koden kunne findes i vores .js filer. 
+                </p>
+
+                <div id="jquery-btn-div">
+                    <p id="first-p">Press this button to see it disappear using jQuery</p>
+                    <button class="jquery-btn">Bye!</button>
+                    <button class="jquery-btn-two">Bye!</button>
+                    <button class="jquery-btn-three">Bye!</button>
+                </div>
+                
+                <!-- Empty for jQuery to add the image at command-->
+                <div id="jquery-img">
+
+                </div>
+
+            </div>
+            
+            <div id="postman-div">
+                <h1 class="title is-3">Postman</h1>
+                <p class="textarea has-text-left" rows="10">
+                    Som udgangspunkt understøtter browsere ikke post eller put metoder. Derfor er Postman blevet udviklet som giver os denne mulighed. <br>
+                    Via postman kan vi forbinde til serveren ligesom med en browser forbinde til serveren via localhost. <br>
+                    Her kan vi vælge imellem GET, POST, PUT DELETE mfl. Hvis vi her vælger POST, så skal vi under "body" vælge "raw" typen <br>
+                    og her efter JSON. På denne måde kan vi sende JSON objekter til serveren som herefter kan blive behandlet af vores javascript.<br>
+                    På billedet nedenfor kan vi se hvordan vi tilføjer elementer til vores program via Postman og POST.
+                </p>
+                <div class="iamge" style="margin: 20px;">
+                    <img src="postman.jpg" alt="Postman example">
+                </div>
+                <p class="textarea has-text-left" rows="10">
+                    Det er som sagt også muligt at ændre i vores liste via PUT. Dette kan ses nedenfor. <br>
+                    Ved at angive elementets id i url'en så kan vi bruge denne parameter til at få fat i den <br>
+                    enkelte car og ikke alle i vores collection. Herudover sender vi et JSON objekt med "brand" som <br>
+                    fortæller hvilket element i vores car vi ønsker at ændre samt den værdig vi ønsker at ændre til.<br><br>
+
+                    Koden for at opdaterer i listen kan ses nedenfor. Koden er kommenteret på engelsk.
+                </p>
+
+                <div class="iamge" style="margin: 20px;">
+                    <img src="postman-put.jpg" alt="Postman example">
+                </div>
+                <div class="iamge" style="margin: 20px;">
+                    <img src="postman-code-snippet.jpg" alt="Postman example">
+                </div>
+
+                <p class="textarea has-text-left" rows="10">
+                    Til sidst er muligheden for at slette elementer. Her bliver elementet slettet ud fra <br>
+                    den parameter som er givet i url'en og herefter bliver den nye list sendt som response. 
+                </p>
+                <div class="iamge" style="margin: 20px;">
+                    <img src="postman-delete.jpg" alt="Postman example">
+                </div>
+            </div>
+            
+            <div id="bulma-div">
+                <h1 class="title is-3">Bulma</h1>
+                <p class="textarea has-text-left" rows="10">
+                    Bulma er et online css bibliotek som gør det muligt for os, super hurtigt at designe vores <br>
+                    HTMl sider med farver og orienteringer. Bulma fungerer på den måde at man linker til deres <br>
+                    onlinebibliotek "https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" som man ville med <br>
+                    en normal css fil. Herefter tildeler man bare sine html tags med &lt;class=""> og inde i <br>
+                    teksfeltet skriver man diverse classenavne som er definerert i biblioteket. f.eks. ville man <br>
+                    kunne skrive "&lt;button class="button"> With bulma &lt;/button>"" og det ville automatisk designe knappen.   
+                </p>
+                <div style="margin: 20px;">
+                    <button>Without bulma</button>
+                    <button class="button">With bulma</button>
+                </div>
+                <p class="textarea has-text-left" rows="10">
+                    Det er muligt at tilegne flere bulma klasser til et tag. Dette gøres ved et mellemrum imellem <br> 
+                    klassenvnene. På denne måde ville vi f.eks. kunne ændre størrelse og farve på den allerede designede knap. <br>
+                    Følgende linje vil skabe nedestående knap button &lt;class="button is-info is-small is-rounded">Rounded Button&lt;/button>
+
+                </p>
+                <div style="margin: 20px;"></div>
+                    <button class="button is-info is-small is-rounded">Rounded Button</button>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>
+    <script src="./jQuery.js"></script>
+</body>
+</html>

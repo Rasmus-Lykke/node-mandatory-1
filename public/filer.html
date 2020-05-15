@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <title>NPM</title>
+</head>
+
+<style>
+
+    #nested-list {
+        text-indent: 20px;
+    }
+
+</style>
+<body>
+    <div style="margin: 5%;" class="box has-text-centered">
+        <h1 class="title is-1">
+            Filer
+        </h1>
+    </div>
+
+    <div class="columns is-hcentered" style="margin: 50px;">
+        <div class="column is-narrow">
+            <div style="margin-left: 5%; width: 250px;" class="list">
+                <p style="margin: 10px;" class="title is-3">NodeJs</p>
+                <p style="font-size: 12px;"> 
+                    Benyt venligst kun "hovedpunkterne" til at navigerer imellem siderne. <br>
+                    Herunder Introduction, Filer, Værktøjer og Kildeliste.
+                </p>
+                <ul>
+                    <a class="list-item" href="/">
+                        Introduction
+                    </a>
+                    <ul id="nested-list">
+                        <a class="list-item">
+                            Node package manager
+                        </a>
+                        <a class="list-item">
+                            Express
+                        </a>
+                        <a class="list-item">
+                            cross-env
+                        </a>
+                    </ul>
+                    <a class="list-item is-active" href="/filer">
+                        Filer
+                    </a>
+                    <ul id="nested-list">
+                        <a class="list-item">
+                            .json
+                        </a>
+                        <a class="list-item">
+                            .js
+                        </a>
+                        <a class="list-item">
+                            .html
+                        </a>
+                    </ul>
+                    <a class="list-item" href="/vaerktoejer">
+                        Værktøjer
+                    </a>
+                    <ul id="nested-list">
+                        <a class="list-item">
+                            budo
+                        </a>
+                        <a class="list-item">
+                            nodemon
+                        </a>
+                        <a class="list-item">
+                            jQuery
+                        </a>
+                        
+                        <a class="list-item">
+                            Postman
+                        </a>
+                        <a class="list-item">
+                            Bulma
+                        </a>
+                    </ul>
+                    <a class="list-item" href="/kildeliste">
+                        Kildeliste
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="main-text">
+                <h1 class="title is-3">.json, .js, .html</h1>
+                <p class="textarea has-text-left" rows="10">
+                    I projekter vil der blive benyttet mange forksllige fil-typer som vil sammen danne <br>
+                    f.eks. en hjemmeside med design og funktioner eller en server som kan kommunikerer <br>
+                    med en database som kan gemme og retunerer data til brugeren. <br><br>
+                    
+                    Vores .json filer kan indeholde json objecter. Det kunne være en liste med <br>
+                    biltyper eller det kunne f.eks. være vores package.json fil som indeholder vores <br>
+                    Dependencies, metadata og scripts. 
+                    I denne applikations primære JavaScript fil kaldet index.js er der defineret en liste kaldet "cars". <br>
+                    Listen cars kan tilgås via <a href="/cars">localhost/cars</a> hvor de bliver returneret som JSON.
+                    Det er også muuligt at tilgå de enkelte "cars" via <a href="/cars/3">localhost/cars/3</a> hvor <br>
+                    tallet (3) indikerer hvilken en id som du ønsker at tilgå. Dette kan udskiftes med et vilkåreligt tal imellem 1-6. <br>
+                    I index.js filen vil man kunne finde nogle variabler med typerne const og let. Const benyttes for at definerer at <br>
+                    variablen er konstant, altså ikke kan ændres efterfølgende. Let bliver brugt til at "scope" variablen så den kun <br>
+                    er tilgængelig hvor den er defineret. I tidligere JavaScript benyttede man var, men dette bliver ikke brugt længere <br>
+                    hvis det kan undås. <br>
+                    Der er også muligheden for at ændre og tilføje til listen, men det vil blive gennemgået i postman afsnittet.<br><br>
+
+                    Vores .js filer er vores JavaScript filer. Disse filer indeholder vores javascripts metoder <br>
+                    Det er disse filer som vil håndterer at retunerer de html side som brugen anmoder <br>
+                    via GET eller gemmer data som er parsed via POST. <br><br>
+
+                    Så har vi vores .html filer. Disse vil indeholde vores hjemmeside elementer. For at designe <br>
+                    vores hjemmeside ville der være mulighed for at oprette .css filer og så linke til dem<br>
+                    fra vores html filer. Men jeg har valgt at benytte mig af det online css bibliotek kaldet bulma <br>
+                    men det vil jeg skrive nærmere om lidt senere.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</body>
+</html>
